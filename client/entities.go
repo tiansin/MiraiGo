@@ -58,9 +58,20 @@ type (
 		Qid       string
 	}
 
+	OtherClientInfo struct {
+		AppId      int64
+		DeviceName string
+		DeviceKind string
+	}
+
 	FriendListResponse struct {
 		TotalCount int32
 		List       []*FriendInfo
+	}
+
+	OtherClientStatusChangedEvent struct {
+		Client *OtherClientInfo
+		Online bool
 	}
 
 	GroupMuteEvent struct {
